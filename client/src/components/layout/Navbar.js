@@ -2,14 +2,14 @@ import React, { Fragment, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../context/auth/authContext';
-import ContactContext from '../../context/contact/contactContext';
+import BlogContext from '../../context/blog/blogContext';
 
 const Navbar = ({ title, icon }) => {
   const authContext = useContext(AuthContext);
-  const contactContext = useContext(ContactContext);
+  const blogContext = useContext(BlogContext);
 
   const { isAuthenticated, logout, user, loadUser } = authContext;
-  const { clearContacts } = contactContext;
+  const { clearBlogs } = blogContext;
 
   useEffect(() => {
     loadUser();
@@ -18,7 +18,7 @@ const Navbar = ({ title, icon }) => {
 
   const onLogout = () => {
     logout();
-    clearContacts();
+    clearBlogs();
   };
 
   const authLinks = (
@@ -58,12 +58,12 @@ const Navbar = ({ title, icon }) => {
 
 Navbar.propTypes = {
   title: PropTypes.string.isRequired,
-  icon: PropTypes.string
+  icon: PropTypes.string,
 };
 
 Navbar.defaultProps = {
-  title: 'Contact Keeper',
-  icon: 'fas fa-id-card-alt'
+  title: 'Bloger',
+  icon: 'fas fa-id-card-alt',
 };
 
 export default Navbar;

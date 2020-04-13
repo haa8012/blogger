@@ -4,7 +4,8 @@
 :root {
   --primary-color: #003699;
   --dark-color: #333333;
-  --light-color: #f4f4f4;
+  --light-color: #f8f8f8;
+  /* --light-color:#f4f4f4; */
   --danger-color: #dc3545;
   --success-color: #28a745;
 }
@@ -21,6 +22,8 @@ body {
   line-height: 1.6;
   background-color: #fff;
   color: #333;
+  background-color: #f8f8f8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ababab' fill-opacity='0.36' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 a {
@@ -93,10 +96,14 @@ img {
 /* Cards */
 .card {
   padding: 1rem;
-  border: #ccc 1px dotted;
-  margin: 0.7rem 0;
+  border: rgb(224, 224, 224) 1px dotted !important;
+  margin: 1.7rem 0;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.3);
 }
-
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 /* List */
 .list {
   margin: 0.5rem 0;
@@ -194,6 +201,7 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  border-radius: 10px;
 }
 
 .btn-link {
@@ -313,8 +321,10 @@ textarea {
   display: block;
   width: 100%;
   padding: 0.4rem;
+  padding-left: 10px;
   font-size: 1.2rem;
   border: 1px solid #ccc;
+  border-radius: 20px;
 }
 
 input[type='submit'],
@@ -335,6 +345,14 @@ button {
   margin: 2rem auto;
   overflow: hidden;
   padding: 0 2rem;
+}
+.form-container-sp {
+  padding: 1rem;
+  border: rgb(224, 224, 224) 1px dotted !important;
+  margin: 1.7rem 0;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.3);
+  background-color: var(--light-color);
 }
 
 .form-container h1,
