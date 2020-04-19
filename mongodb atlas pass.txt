@@ -1,3 +1,0 @@
-cluster user and pass:
-
-admin:adminBlogger80#
